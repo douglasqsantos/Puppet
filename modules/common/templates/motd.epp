@@ -1,0 +1,32 @@
+<% | String   $os_name,
+     String   $os_major,
+     String   $os_minor,
+     String   $os_uptime,
+     String   $hw_name,
+     Float    $load_avg_1m,
+     Float    $load_avg_5m,
+     Float    $load_avg_15m,
+     String   $root_free_space,
+     String   $root_total_size,
+     String   $root_perc_used,
+     String   $server_name,
+     String   $os_memory_free,
+     String   $os_memory_total,
+     Integer  $processor_count,
+     String   $processor_model,
+     String   $server_role
+| -%>
+############################################################################################################
+# ALERT! You are entering into a secured area!                                                             #
+# Your IP, Login Time, Username has been noted and has been sent to the server administrator!              #
+# This service is restricted to authorized users only. All activities on this system are logged.           #
+# Unauthorized access will be fully investigated and reported to the appropriate law enforcement agencies. #
+############################################################################################################
+#
+# You are logged into <%= $server_name %>, running <%= "${os_name} ${os_major}.${os_minor}" %> working as <%= $server_role %>
+# Uptime: <%= $os_uptime %> | Load Average: <%= $load_avg_1m %>, <%= $load_avg_5m %>, <%= $load_avg_15m %>
+# Hardware: <%= $hw_name %> | Mem Free: <%= $os_memory_free %>, Mem Total: <%= $os_memory_total %>
+# Processor Count: <%= $processor_count %>, Model: <%= $processor_model %>
+# Disk /: Total: <%= $root_total_size %>, Free: <%= $root_free_space %>, Used: <%= $root_perc_used %>
+#
+############################################################################################################

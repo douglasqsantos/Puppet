@@ -1,8 +1,3 @@
-# Puppet - Modules/Notes
-
-Examples of use the common modules so far
-
-```puppet
 # Non-Defined Servers
 node 'default' {
   class { 'common':
@@ -26,4 +21,3 @@ node 'agent.dqs.local' {
     common_user => 'ec2user',
   }
 }
-```
